@@ -1,7 +1,7 @@
 (function init() {
   $("#detailed-information-view").hide();
 
-  $("input[name='title']").on("keyup", function (e) {
+  $("input[name='title']").on("keypress", function (e) {
     if (e.which === 13) {
       sendGetForm($("input[name='title']").val(), "?s=");
     }
@@ -33,6 +33,7 @@ function sendGetForm(title, searchType) {
 function detailedInformationView(data) {
   $("#search-index-view").hide();
   $("#detailed-information-view").fadeIn();
+  $("#detailed-information-view > * > *").remove();
 
   $("#img-frame").append( "<img src='"+ data.Poster +"'/>" );
   $("#detailed-text").append( "<h2>"+ data.Title +"</h2>" );
