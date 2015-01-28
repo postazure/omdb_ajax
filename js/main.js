@@ -9,6 +9,7 @@
 })();
 
 function sendGetForm(title, searchType) {
+  var titleQuery = title.replace(/\s/g,"+");
   var url = "http://omdbapi.com/"+ searchType + title;
   $.ajax({
     type: "get",
