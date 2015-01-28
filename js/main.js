@@ -51,7 +51,7 @@ function searchIndexView(data) {
 
   var movies = data.Search;
   for (var i = 0; i < movies.length; i++) {
-    var movieNode = $("<h3 class='link'>" + movies[i].Title + "</h3>" ).data(movies[i]);
+    var movieNode = $("<h3 class='link'>" + movies[i].Title + " (" +movies[i].Year+  ")"+ "</h3>" ).data(movies[i]);
     $("#movie-list").append( movieNode );
   }
 
