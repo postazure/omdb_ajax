@@ -1,5 +1,6 @@
 (function init() {
   $("#detailed-information-view").hide();
+  $("#search-index-view").hide();
 
   $("input[name='title']").on("keypress", function (e) {
     if (e.which === 13) {
@@ -39,7 +40,8 @@ function detailedInformationView(data) {
   $("#img-frame").append( "<img src='"+ data.Poster +"' onerror='imgError(this)';/>" );
   $("#detailed-text").append( "<h2>"+ data.Title +"</h2>" );
   $("#detailed-text").append( "<h3>("+ data.Year +")</h3>" );
-  var details = ["Rated","Plot","Genre","Actors","Writers"];
+
+  var details = ["Rated","Plot","Genre","Actors","Writer", "Awards"];
   for (var i = 0; i < details.length; i++) {
     $("#detailed-text").append( "<p><strong>"+details[i]+": </strong>"+ data[details[i]] +"</p>" );
   }
@@ -63,6 +65,8 @@ function searchIndexView(data) {
 
 function imgError(image) {
   image.onerror = "";
-  image.src = "http://placekitten.com/300/451";
+  image.src = "http://placekitten.com/g/300/451";
+  $("#img-frame").append("<h3>No Image Found</h3>");
+
   return true;
 }

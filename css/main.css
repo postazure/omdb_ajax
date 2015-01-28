@@ -1,10 +1,15 @@
+#page-header{
+  position: absolute;
+  left: 483px;
+}
+
 body {
   background-color: #e1dfcb;
 }
 
 #container {
   width: 60%;
-  height: 90vh;
+  height: 80vh;
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -13,6 +18,7 @@ body {
   border-size: 2px;
   border-style: solid;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 input{
@@ -28,19 +34,31 @@ input{
   padding-bottom: 3px;
   padding-left: 40px;
   padding-right: 40px;
+  box-shadow: inset 0 0 10px #888888;
 }
 
 #img-frame {
-  margin-left: 20px;
+  margin-left: 15px;
   margin-right: 10px;
   float: left;
   width: 35%;
 }
+#img-frame h3 {
+  position: absolute;
+  top: 230px;
+  left: 400px;
+  border: 2px solid white;
+  background-color: rgb(186, 180, 180);
+  padding: 5px;
+  border-radius: 9px;
+  opacity: 0.8;
+  color: white;
+}
 
 img {
   width: 300px;
-  border: 1px solid black;
   border-radius: 10px;
+  border: 4px solid #7a796d;
 }
 
 #detailed-text {
@@ -51,9 +69,24 @@ img {
   float: right;
   width: 58%;
   padding: 5px;
+  box-shadow: inset 0 0 10px #888888;
 }
 
 .link {
   cursor: default;
   text-decoration: underline;
+  margin-right: 48px;
+  padding: 3px;
+}
+.link:hover {
+  background-color:#888888;
+  color: white;
+}
+
+#movie-list {
+  background-color: #e1dfcb;
+  border-radius: 10px;
+  border: 4px solid #7a796d;
+  margin: 15px;
+  box-shadow: inset 0 0 10px #888888;
 }
