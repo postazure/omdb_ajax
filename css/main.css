@@ -56,7 +56,7 @@ input{
 }
 
 img {
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
   border: 4px solid #7a796d;
 }
@@ -73,7 +73,7 @@ img {
 }
 
 .link {
-  cursor: default;
+  cursor: pointer;
   text-decoration: underline;
   margin-right: 48px;
   padding: 3px;
