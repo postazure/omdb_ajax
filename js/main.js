@@ -2,7 +2,9 @@
   $("#detailed-information-view").hide();
 
   $("input[name='title']").on("keyup", function (e) {
-    sendGetForm($("input[name='title']").val(), "?s=");
+    if (e.which === 13) {
+      sendGetForm($("input[name='title']").val(), "?s=");
+    }
   });
 })();
 
