@@ -39,6 +39,8 @@ input{
 
 img {
   width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #detailed-text {

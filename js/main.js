@@ -36,7 +36,7 @@ function detailedInformationView(data) {
   $("#detailed-information-view").fadeIn();
   $("#detailed-information-view > * > *").remove();
 
-  $("#img-frame").append( "<img src='"+ data.Poster +"'/>" );
+  $("#img-frame").append( "<img src='"+ data.Poster +"' onerror='imgError(this)';/>" );
   $("#detailed-text").append( "<h2>"+ data.Title +"</h2>" );
   $("#detailed-text").append( "<h3>("+ data.Year +")</h3>" );
   var details = ["Rated","Plot","Genre","Actors","Writers"];
@@ -59,4 +59,10 @@ function searchIndexView(data) {
   $(".link").on("click", function () {
     sendGetForm($(this).data("imdbID"), "?i=");
   });
+}
+
+function imgError(image) {
+  image.onerror = "";
+  image.src = "http://placekitten.com/300/451";
+  return true;
 }
